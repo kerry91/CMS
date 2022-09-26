@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  margin-left:10%;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+/* Style the footer */
+footer {
+  padding: 10px;
+  text-align: center;
+  color: black;
+position: fixed;
+   left: 0;
+   bottom: 0;
+  z-index: -1;
+   width: 100%;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+  
+}
+
+
+
+/* to customize the scrollbar */
+body::-webkit-scrollbar {
+
+    width: 0.5rem;
+ 
+  
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(46, 32, 110);
+    
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background: #ddaaff;
+    border-radius: 7px;
+}
+
+
+/* to customize the scrollbar -end */
+
+nav {
+    color: #aaa;
+    position: fixed;
+     z-index: 1;
+    left: 0;
+    height: 100vh;
+    width: 5%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s ease;
+
+}
+
+.logo {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+.title {
+    display: none;
+}
+
+
+.arrows {
+    transition: all 0.7s ease;
+}
+nav:hover .arrows {
+    transform: rotate(-180deg);
+}
+nav:hover .title {
+    display: block;
+}
+
+ ul {
+     list-style: none;
+     height: 70%;
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+ }
+
+.bottom{
+     list-style: none;
+     height: 10%;
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+ }
+a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+li a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    width: 6rem;
+    color: #aaa;
+    transition: color 0.3s ease;
+    
+}
+
+
+li a:hover {
+    color: #e66ddb;
+  text-decoration: none;
+   
+}
+
+li a:active {
+  color: #e66ddb;
+  text-decoration: none;
+}
+
+li a:visited {
+  text-decoration: none;
+}
+
+li a:link {
+  text-decoration: none;
+}
+
+li span {
+    display: none;
+}
+li:last-child {
+    margin-top: auto;
+}
+
+main h1 {
+    background: linear-gradient(-45deg, #ddaaff, #69318f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+}
+
+
+@media screen and (min-width: 768px) {
+nav:hover {
+    color: #ddaaff;
+    width: 15%;
+}
+
+nav:hover li span {
+    display: block;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+
+  nav{
+    width: 20%;
+  }
+  section{
+    margin-left:20%;
+  }
+
+}
+
+
+
+/* ScrolBar  */
+.scrollbar
+{
+height: 100%;
+width: 100%;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+.scrollbar:hover
+{
+
+height: 100%;
+width: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+/* Scrollbar Style */ 
+
+#style-1::-webkit-scrollbar-track
+{
+border-radius: 2px;
+}
+
+#style-1::-webkit-scrollbar
+{
+width: 0px;
+background-color: #F7F7F7;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #BFBFBF;
+}
+/* Scrollbar End */ 
