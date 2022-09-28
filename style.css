@@ -18,6 +18,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+  margin-bottom: 10px;
+}
+
 
 /* Container for flexboxes */
 section {
@@ -50,15 +54,23 @@ article {
 
 
 /* Style the footer */
-footer {
-  padding: 10px;
-  text-align: center;
+footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
   color: black;
-position: fixed;
-   left: 0;
-   bottom: 0;
-  z-index: -1;
-   width: 100%;
+  text-align: center;
+}
+
+.portfolioBtn:link{
+  text-decoration: none;
+  color: black;
+}
+
+.portfolioBtn:hover{
+  color: var(--nav-icon-hover);
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
