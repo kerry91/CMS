@@ -2,11 +2,12 @@
 
 var dc = {};
 
-var homeHtml = "pages/home.html" ; 
-var page1Html = "pages/cats.html";
-var page2Html = "pages/aliens.html";
+var homeHtml = "pages/home.html" ;
+var page0Html = "pages/coming.html";
+var page1Html = "pages/user.html";
+var page2Html = "pages/animals.html";
 var page3Html = "pages/contact.html";
-var page4Html = "pages/contact.html";  
+var page4Html = "pages/contact.html";
 
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
@@ -49,6 +50,18 @@ dc.loadHome = function () {
 };
 
 //Load contacts page
+dc.loadPage0 = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+  page0Html,
+  function (responseText) {
+    document.querySelector("#main-content")
+      .innerHTML = responseText;
+  },
+  false);
+};
+
+//Load contacts page
 dc.loadPage1 = function () {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
@@ -82,7 +95,7 @@ dc.loadPage3 = function () {
       .innerHTML = responseText;
   },
   false);
-};  
+};
 
 //Load about pagte
 dc.loadPage4 = function () {
@@ -94,7 +107,7 @@ dc.loadPage4 = function () {
       .innerHTML = responseText;
   },
   false);
-};   
+};
 
 
 global.$dc = dc;
@@ -111,4 +124,3 @@ global.$dc = dc;
        // modal.style.display = "none";
    // }
 //}
- 
